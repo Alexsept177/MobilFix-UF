@@ -1,46 +1,70 @@
 :root {
-    --color--background: rgb(248, 237, 225);
-    --color--text-color: blue;
+    --color--background: rgb(192, 192, 192);
+    --color--text-color: rgb(255, 255, 255);
     --color--header: black;
+    --color--text-id: rgb(53, 19, 245);
 }
-
-
 
 body {
     width: 100%;
     height: 100%;
     background-color:var(--color--background);
+    margin: 0;
 }
-
 
 header {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: .3fr 1fr 1fr .3fr ;
     background-color: var(--color--text-color);
+    align-items: center;
 }
 
+header img {
+    grid-column: 1;
+    width: 100%;
+}
 
 header > h1 {
-    grid-column: 1;
-    font-size: 2rem;
-}
-
-header > h2 {
     grid-column: 2;
-    font-size: 2rem;
-}
-
-header > h3 {
-    grid-column: 3;
-    font-size: 2rem;
-}
-
-h1  {
-    font-size: 3rem;
-    
-    color:var(--color--text-color);
-    position: relative;
-    text-align: center;
+    font-size: 1.8rem;
+    color:var(--color--header);
+    justify-self: left;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+header h2 {
+    grid-column: 3;
+    font-size: 1.8rem;
+    justify-self: right;
+    padding: 0 .7em 0 0;
+}
+
+
+header > h3 {
+    grid-column: 4;
+    font-size: 1.8rem;
+    justify-self: right;
+    padding: 0 .7em 0 0;
+}
+
+section {
+    display: grid;
+    grid-template-areas: 
+    "h . ."
+    ". . ."
+    "p . .";
+}
+
+
+section span {
+    grid-area: h  ;
+    font-size: 1.3em;
+    padding: 0 0 1em 30em;
+}
+
+section img {
+    grid-area: p ;
+    width: 67em;
+}
+
 
