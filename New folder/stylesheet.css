@@ -72,9 +72,16 @@ section span {
     padding: 0 0 0 4.5em;
     font-size: 1.8em;
 }
-section .fix {
+section #fix {
     grid-row: 4;
     grid-column: 3;
+}
+
+section .idee  {
+    grid-column: auto;
+    grid-row: 4;
+    align-self: center;
+    padding-left: 10em;
 }
 
 
